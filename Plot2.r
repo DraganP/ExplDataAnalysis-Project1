@@ -1,4 +1,4 @@
-setwd("C:/Users/v-drapop/Documents/Coursera/DataScience/ExploratoryDataAnalysis")
+setwd("C:/Users/.../Documents/Coursera/DataScience/ExploratoryDataAnalysis")
 # Read the complete dataset
 all_data <- read.csv("household_power_consumption.txt", header = TRUE, sep = ";", quote = "\"", na.strings = "?", nrows = 2075259, check.names = FALSE, comment.char = "", stringsAsFactors = FALSE)
 all_data$Date <- as.Date(all_data$Date, format = "%d/%m/%Y")

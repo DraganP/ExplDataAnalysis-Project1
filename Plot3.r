@@ -1,6 +1,6 @@
-setwd("C:/Users/v-drapop/Documents/Coursera/DataScience/ExploratoryDataAnalysis")
+setwd("C:/Users/.../Documents/Coursera/DataScience/ExploratoryDataAnalysis")
 # Read the complete dataset
-data <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
+data <- read.table("household_power_consumption.txt", header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
 
 # Subset the desired dates from the complete dataset
 d_data <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]
@@ -12,7 +12,6 @@ rm(data)
 datetime <- strptime(paste(d_data$Date, d_data$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
 
 # Create plot variables
-globalActPwr <- as.numeric(d_data$Global_active_power)
 subMtr1 <- as.numeric(d_data$Sub_metering_1)
 subMtr2 <- as.numeric(d_data$Sub_metering_2)
 subMtr3 <- as.numeric(d_data$Sub_metering_3)
